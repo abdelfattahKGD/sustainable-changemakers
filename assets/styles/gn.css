@@ -1,0 +1,335 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9; /* Added background color for uniformity */
+}
+
+/* Common Container Styling */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header and Footer */
+nav, footer {
+    background-color: #4B1D82; /* Primary color */
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+/* Typography */
+h2 {
+    text-align: center;
+    font-size: 2.5em; /* Consistent heading size */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5em; /* Consistent subheading size */
+    color: #2980b9;
+}
+
+/* PDF Section - Book Thumbnails */
+.books-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-item {
+    width: 30%;
+    text-align: center;
+}
+
+.book-item img {
+    width: 140px;
+    height: 160px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+}
+
+.book-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Test Section Styling */
+.test-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f9;
+}
+
+.test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* 3D Flip Card */
+.test-card {
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.test-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.test-front, .test-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.test-front {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.test-front p {
+    color: #555;
+}
+
+.test-front button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.test-front button:hover {
+    background-color: #1e6a93;
+}
+
+.test-back {
+    background-color: #27ae60;
+    transform: rotateY(180deg);
+    padding: 20px;
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+}
+
+/* Input and Textarea Styling */
+.contact-section input[type="text"], 
+.contact-section input[type="email"], 
+.contact-section textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ececec;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section input:focus, 
+.contact-section textarea:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.3);
+    outline: none;
+}
+
+.contact-section textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Button Styling */
+.contact-section .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section .btn:hover {
+    background-color: #1e6a93;
+    transform: translateY(-3px);
+}
+
+.contact-section .btn:active {
+    transform: translateY(0);
+}
+
+/* Feedback message */
+#contact-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #27ae60; /* Success color */
+    display: none;
+}
+
+/* Project Ideas Section */
+.projects-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.projects-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.projects-section li {
+    background-color: #fafafa;
+    border: 2px solid #ececec;
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.projects-section li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.projects-section li::before {
+    content: '⭐'; /* Add an icon to each list item */
+    font-size: 24px;
+    color: #ffd700;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.projects-section li strong {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+.projects-section li p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.4;
+}
+
+.projects-section li:hover strong {
+    color: #2980b9;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .test-card {
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-section .btn {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .projects-section ul {
+        grid-template-columns: 1fr; /* Stacks items in smaller screens */
+    }
+}

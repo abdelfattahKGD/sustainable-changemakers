@@ -1,0 +1,230 @@
+<!--
+--------------------------------------------
+*@file:home.html.
+*@Author:Abdelfattah Khaled.
+*@Details:creating home page with Frontend.
+*@project:Home page
+*@version:1.0.0
+*@IDE:VS code editor
+*@Track:Web Development
+*@Team:Sustainable Changemakers
+--------------------------------------------
+-->
+
+<!------------------project start---------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!------------------Home css style link---------------->
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <link rel="stylesheet" href="assets/styles/gn.css">
+    <!------------------page title---------------->
+    <title>Sustainable Changemakers||G12</title>
+</head>
+<!------------------body start---------------->
+<body>
+    <!------------------navbar start---------------->
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1>Sustainable Changemakers</h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="home.html">home</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#pdf">Goals Material</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#projects">projects</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+          </li>
+      </ul>
+  </div>
+          </nav>
+    <!------------------navbar end---------------->
+
+   <!-- PDF Section (Book Thumbnails and Viewer Modal) -->
+<section class="pdf-section" id="pdf">
+    <h2>PDF Resources</h2>
+    
+    <!-- Books Grid -->
+    <div class="books-grid">
+      <!-- Book 1 -->
+      <div class="book-item">
+        <img src="assets/images/goal.jpg" alt="Book 1" onclick="openPDF('assets/goals/goal 12.pdf')">
+        <p>Goal 1</p>
+      </div>
+  
+      <!-- Book 2 -->
+      <div class="book-item">
+        <img src="assets/images/goal.jpg" alt="Book 2" onclick="openPDF('assets/goals/goal 13.pdf')">
+        <p>Goal 2</p>
+      </div>
+
+       <!-- Book 3 -->
+       <div class="book-item">
+        <img src="assets/images/goal.jpg" alt="Book 2" onclick="openPDF('assets/goals/goal 14.pdf')">
+        <p>Goal 3</p>
+      </div>
+
+       <!-- Book 4 -->
+       <div class="book-item">
+        <img src="assets/images/goal.jpg" alt="Book 2" onclick="openPDF('assets/goals/goal 15.pdf')">
+        <p>Goal 4</p>
+      </div>
+
+       <!-- Book 5 -->
+       <div class="book-item">
+        <img src="assets/images/goal.jpg" alt="Book 2" onclick="openPDF('assets/goals/goal 16.pdf')">
+        <p>Goal 5</p>
+      </div>
+
+       <!-- Book 6 -->
+       <div class="book-item">
+        <img src="assets/images/goal.jpg" alt="Book 2" onclick="openPDF('assets/goals/goal 17.pdf')">
+        <p>Goal 6</p>
+      </div>
+  
+      <!-- Add other books similarly -->
+    </div>
+  
+    <!-- PDF Viewer Modal -->
+    <div id="pdf-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePDFModal()">&times;</span>
+        <iframe id="pdf-frame" src="" width="100%" height="600px"></iframe>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Project Ideas Section -->
+<section class="projects-section" id="projects">
+    <h2>Project Ideas & Volunteering</h2>
+    
+    <ul>
+      <!-- Community Service Projects -->
+      <li><strong>Community Clean-Up:</strong> Organize a local park or neighborhood clean-up.</li>
+      <li><strong>Food Drive:</strong> Collect non-perishable items and donate them to a local food bank.</li>
+      <li><strong>Clothing Donation:</strong> Gather gently used clothes for shelters or organizations that help the homeless.</li>
+      <li><strong>Book Donation:</strong> Start a book drive to collect books for underprivileged schools or libraries.</li>
+      <li><strong>Neighborhood Beautification:</strong> Paint murals or plant flowers to improve the aesthetics of public spaces.</li>
+      <li><strong>Senior Assistance:</strong> Volunteer at a nursing home by reading to seniors or helping with activities.</li>
+      <li><strong>Tutoring Program:</strong> Offer free tutoring sessions for younger students or peers who need academic support.</li>
+      <li><strong>School Supply Drive:</strong> Collect school supplies for children in need.</li>
+      <li><strong>Pet Adoption Event:</strong> Partner with a local animal shelter to organize a pet adoption event.</li>
+      <li><strong>Community Garden:</strong> Start or help maintain a community garden in your neighborhood.</li>
+      
+      <!-- Environmental Projects -->
+      <li><strong>Tree Planting:</strong> Organize a tree planting campaign to combat deforestation and increase green spaces.</li>
+      <li><strong>Recycling Program:</strong> Set up a recycling initiative in your school or community to reduce waste.</li>
+      <li><strong>Beach/Waterway Clean-Up:</strong> Organize a clean-up event at a local beach, river, or lake.</li>
+      <li><strong>Composting Initiative:</strong> Start a composting program at school or in your neighborhood to reduce food waste.</li>
+      <li><strong>Energy Conservation Campaign:</strong> Promote energy-saving techniques and awareness in your community.</li>
+      <li><strong>Wildlife Protection:</strong> Volunteer with a wildlife conservation group to help protect endangered species.</li>
+      <li><strong>Eco-Friendly Products Fair:</strong> Organize a fair showcasing environmentally friendly products and sustainable living practices.</li>
+      <li><strong>Carbon Footprint Awareness:</strong> Raise awareness about how individuals can reduce their carbon footprints.</li>
+      <li><strong>Water Conservation Campaign:</strong> Educate the community on water conservation methods like rainwater harvesting.</li>
+      <li><strong>Environmental Art Project:</strong> Create art installations from recycled materials to raise environmental awareness.</li>
+  
+      <!-- Science & Technology Projects -->
+      <li><strong>Science Fair:</strong> Participate in or organize a school or community science fair to showcase innovative projects.</li>
+      <li><strong>STEM Mentorship Program:</strong> Mentor younger students in science, technology, engineering, and math (STEM) subjects.</li>
+      <li><strong>Robotics Workshop:</strong> Start a workshop to teach students the basics of robotics and programming.</li>
+      <li><strong>Renewable Energy Model:</strong> Create a model that demonstrates how renewable energy sources like solar or wind power work.</li>
+      <li><strong>Technology Donation Drive:</strong> Collect old computers, tablets, or phones for schools or nonprofits in need.</li>
+      <li><strong>Digital Literacy Program:</strong> Help teach digital literacy and basic computer skills to community members who lack access to technology.</li>
+      <li><strong>App Development:</strong> Develop an app that solves a local problem or helps connect volunteers with opportunities.</li>
+      <li><strong>3D Printing for Good:</strong> Use 3D printing to create useful items for people in need, such as prosthetics or tools.</li>
+      <li><strong>Virtual Reality for Education:</strong> Create or contribute to virtual reality experiences that enhance education and make learning more immersive.</li>
+      <li><strong>Drone Assistance Program:</strong> Use drones to assist in wildlife conservation or search-and-rescue missions.</li>
+  
+      <!-- Social Impact Projects -->
+      <li><strong>Anti-Bullying Campaign:</strong> Start a campaign to raise awareness about bullying and promote kindness in schools.</li>
+      <li><strong>Mental Health Awareness:</strong> Organize mental health awareness programs or events in your school or community.</li>
+      <li><strong>Peer Counseling:</strong> Train as a peer counselor to offer emotional support to fellow students in need.</li>
+      <li><strong>Gender Equality Campaign:</strong> Promote gender equality and women’s rights through educational events or social media campaigns.</li>
+      <li><strong>Inclusive Sports Day:</strong> Organize a sports day that encourages participation from students of all abilities, including those with disabilities.</li>
+      <li><strong>Cultural Exchange Program:</strong> Create a cultural exchange event where students can learn about different traditions and cultures.</li>
+      <li><strong>Social Media for Good:</strong> Use social media platforms to raise awareness about important causes, such as climate change or human rights.</li>
+      <li><strong>Health Awareness Campaign:</strong> Promote health and wellness in your community by organizing events focused on nutrition, exercise, or disease prevention.</li>
+      <li><strong>Homelessness Awareness:</strong> Organize a campaign to raise awareness about homelessness and collect donations for shelters.</li>
+      <li><strong>Online Fundraising Campaign:</strong> Use crowdfunding platforms to raise money for a charitable cause that matters to you.</li>
+  
+      <!-- Education & Empowerment Projects -->
+      <li><strong>Public Speaking Workshop:</strong> Organize a workshop to help students improve their public speaking and presentation skills.</li>
+      <li><strong>Financial Literacy Program:</strong> Offer a program to teach students or community members the basics of managing money, saving, and investing.</li>
+      <li><strong>Entrepreneurship Club:</strong> Start a club that encourages students to brainstorm and launch small business ideas.</li>
+      <li><strong>Debate Club:</strong> Create a debate club where students can practice critical thinking and public speaking skills by discussing important issues.</li>
+      <li><strong>Personal Development Workshops:</strong> Host workshops on self-confidence, time management, and goal setting to empower fellow students.</li>
+      <li><strong>Girls in STEM Initiative:</strong> Encourage girls to explore STEM fields by organizing workshops or inviting women in STEM as guest speakers.</li>
+      <li><strong>Career Day:</strong> Organize a career day where professionals from various fields can share insights and inspire students.</li>
+      <li><strong>After-School Reading Program:</strong> Start an after-school reading club to encourage students to read and discuss books together.</li>
+      <li><strong>Conflict Resolution Workshop:</strong> Offer a workshop to teach students strategies for resolving conflicts peacefully and effectively.</li>
+      <li><strong>Language Exchange Program:</strong> Create a program where students can practice new languages by pairing up with native speakers for conversation practice.</li>
+    </ul>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to get in touch, feel free to reach out using the form below.</p>
+    <form id="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div id="contact-result"></div>
+</section>
+
+
+    <!------------------footer section start---------------->
+        <footer id="contact">
+            <div class="footer-content">
+              <h3>Sustainable Changemakers</h3>
+            </div>
+            <ul class="socials">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <div class="footer-bottom">
+              <ul class="footer-nav">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <p>&copy; 2024 Nasa App Sapce. Devloped By Sustainable Changemakers</p>
+            </div>
+          </footer>
+        
+    <!------------------footer section end---------------->
+    <!------------------content end---------------->
+
+    <!------------------Home JS link---------------->
+    <script src="assets/scripts/home.js"></script>
+    <script src="assets/scripts/gn.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+    <!------------------body end---------------->
+</body>
+</html>
+<!------------------project end---------------->
